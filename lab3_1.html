@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html>
+
+        <head>
+            <meta charset="utf-8" />
+            <title> Casa de cambio </title>
+            <style type="text/css">
+
+                h1{
+                    text-align: center;
+                    color: grey;
+                }
+                h5{
+                    text-align: center;
+                    color: grey;
+                    
+                }
+
+            </style>
+
+            <script>    
+                 
+                 function cambioMoneda(){
+
+                     var cambio=parseInt(document.getElementById("monto").value)
+                     var Dolares=document.getElementById("Dolares");
+                    
+                     if(Dolares.checked){
+
+                        rpta=cambio*3.71
+                        
+                        alert(rpta.toFixed(2)+" "+"Soles")
+
+                        }else{
+                         rpta=cambio/3.71
+                         alert(rpta.toFixed(2)+" "+"Dolares")
+                     }
+  
+                 }
+
+      
+            </script>
+
+        </head>
+
+        <body>
+            <h1> Casa de cambio </h1>
+            <h5 style="padding-right: 125px;"> Seleccionar moneda a enviar: </h2>
+            <form style="text-align: center;">
+
+             <div>
+                <input type="radio" id="Dolares" value="opcion1"> 
+                    <text style="color: grey; padding-right: 20px;">Dolares</text> 
+                </input>
+                <input type="radio" id="Soles" value="opcion2"> 
+                    <text style="color: grey;">Soles</text> 
+                </input>
+             </div>
+             <div>
+             <h5 style="padding-right: 200px;"> Ingrese monto: </h5>
+                <input type="text" id="monto">     </input>
+             </div>
+             <div>
+             <button style="margin-top: 10px; background-color: black;" id="cotizar" onclick="cambioMoneda()"> 
+                <text style="color: aliceblue;">Cotizar </text>
+            </button>
+             </div>
+            </form>
+        </body>
+    </html>
